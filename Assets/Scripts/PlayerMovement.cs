@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal"); 
         float verticalInput=Input.GetAxis("Vertical"); 
 
+        if (DialogueManager.isActive == true) 
+           return; 
+
         //rotation = rotation - Input.GetAxis("Vertical") * rotationSpeed;
         //transform.rotation = Quaternion.Euler(new Vector3(0.0f, rotation, 0.0f));
 
