@@ -457,7 +457,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204208708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b44b47ee9b2250941a164d346cbad098, type: 3}
   m_Name: 
@@ -478,11 +478,10 @@ GameObject:
   - component: {fileID: 484556223}
   - component: {fileID: 484556222}
   - component: {fileID: 484556225}
-  - component: {fileID: 484556227}
   - component: {fileID: 484556228}
   - component: {fileID: 484556230}
   - component: {fileID: 484556229}
-  - component: {fileID: 484556226}
+  - component: {fileID: 484556221}
   m_Layer: 0
   m_Name: 'NPC '
   m_TagString: Untagged
@@ -490,6 +489,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &484556221
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484556220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2375836, y: 2, z: 3.1786375}
+  m_Center: {x: 1.1187901, y: 0, z: 0.047068913}
 --- !u!23 &484556222
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -565,33 +577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5e04fd953a88d74788c708f4f8dca86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &484556226
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484556220}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.98, y: 1.72, z: 3.61}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &484556227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 484556220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5db223ed020b30a448104696315e2467, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shopkeeper: {fileID: 0}
-  sfxPlayer: {fileID: 0}
 --- !u!114 &484556228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -643,7 +628,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1188356184
 GameObject:

@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("Started conversation! Loaded messages: " + messages.Length);
         DisplayMessage(); 
+        backgroundBox.LeanScale(Vector3.one, 0.5f); 
     }
 
     void DisplayMessage() 
@@ -43,8 +44,10 @@ public class DialogueManager : MonoBehaviour
             DisplayMessage(); 
         } else {
             Debug.Log("Conversation ended!"); 
+            backgroundBox.LeanScale(Vector3.zero, 0.5f).setEaseInOutExpo(); 
             isActive = false; 
         }
+    
 
     }
     void Start()
