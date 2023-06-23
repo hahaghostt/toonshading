@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour
     int activeMessage = 0; 
     public static bool isActive = false; 
 
+    
+
     public void OpenDialogue(Message[] messages, Actor[] actors) 
     {
         currentMessages = messages; 
@@ -24,7 +26,7 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("Started conversation! Loaded messages: " + messages.Length);
         DisplayMessage(); 
-        backgroundBox.LeanScale(Vector3.one, 0.5f); 
+        backgroundBox.LeanScale(Vector3.one, 0.2f); 
     }
 
     void DisplayMessage() 
@@ -35,6 +37,8 @@ public class DialogueManager : MonoBehaviour
         Actor actorToDisplay = currentActors[messageToDisplay.actorId];
         actorName.text = actorToDisplay.name;
         actorImage.sprite = actorToDisplay.sprite; 
+
+        AnimateTextColor(); 
     }
 
     public void NextMessage() 
@@ -49,6 +53,12 @@ public class DialogueManager : MonoBehaviour
         }
     
 
+    }
+
+    void AnimateTextColor() 
+    {
+        LeanTween.textAlpha(messageText.rectTransform, 0, 0);
+        LeanTween.textAlpha(messageText.rectTransform, 1, 0.5f);
     }
     void Start()
     {
